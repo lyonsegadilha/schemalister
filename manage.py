@@ -7,6 +7,7 @@ if __name__ == "__main__":
     os.environ.setdefault("SALESFORCE_CONSUMER_KEY", "schemalistter.setings")
     os.environ.setdefault("SALESFORCE_CONSUMER_SECRET", "schemalister.settings")
     os.environ.setdefault("SALESFORCE_API_VERSION", "schemalister.settings")
+    os.environ.setdefault("SALESFORCE_API_VERSION", "41")
 
     from django.core.management import execute_from_command_line
 
