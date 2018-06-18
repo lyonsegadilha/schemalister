@@ -1,5 +1,6 @@
 import os
-import urlparse
+import urllib
+
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 PROJECT_PATH = os.path.dirname(os.path.abspath(__file__))
@@ -46,7 +47,7 @@ MIDDLEWARE_CLASSES = (
 
 # Add in request context processor
 from django.conf import global_settings
-TEMPLATE_CONTEXT_PROCESSORS = global_settings.TEMPLATE_CONTEXT_PROCESSORS + (
+TEMPLATE_CONTEXT_PROCESSORS = global_settings.DJANGO_SETTINGS_MODULE + (
     'django.core.context_processors.request',
 )
 
