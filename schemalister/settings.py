@@ -48,7 +48,7 @@ MIDDLEWARE_CLASSES = (
 
 # Add in request context processor
 from django.conf import global_settings
-TEMPLATE_CONTEXT_PROCESSORS = DJANGO_SETTINGS_MODULE + (
+TEMPLATE_CONTEXT_PROCESSORS =  (
     'django.core.context_processors.request',
 )
 
