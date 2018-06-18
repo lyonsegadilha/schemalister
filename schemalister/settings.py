@@ -10,6 +10,7 @@ PROJECT_PATH = os.path.dirname(os.path.abspath(__file__))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY')
+DJANGO_SETTINGS_MODULE = os.environ.get('DJANGO_SETTINGS_MODULE')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG') == '1'
@@ -47,7 +48,7 @@ MIDDLEWARE_CLASSES = (
 
 # Add in request context processor
 from django.conf import global_settings
-TEMPLATE_CONTEXT_PROCESSORS = global_settings.DJANGO_SETTINGS_MODULE + (
+TEMPLATE_CONTEXT_PROCESSORS = DJANGO_SETTINGS_MODULE + (
     'django.core.context_processors.request',
 )
 
